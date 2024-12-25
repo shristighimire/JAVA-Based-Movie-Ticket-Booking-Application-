@@ -1,0 +1,28 @@
+    private void initializeUI() {
+        // North Panel
+        northPanel = new JPanel();
+        northPanel.setBackground(Color.RED);
+
+        JLabel nowStreamingLabel = new JLabel("Now Streaming");
+        nowStreamingLabel.setFont(new Font("Arial", Font.ITALIC, 18));
+        fullNameLabel = new JLabel("SBG Cinemas");
+        fullNameLabel.setForeground(Color.WHITE);
+        fullNameLabel.setFont(new Font("Arial", Font.BOLD, 40));
+
+        northPanel.add(nowStreamingLabel);
+        northPanel.add(fullNameLabel);
+        add(northPanel, BorderLayout.NORTH);
+
+        // West Panel
+        setupWestPanel();
+
+        // Center Panel
+        setupCenterPanel();
+
+        // South Panel
+        setupSouthPanel();
+
+        setSize(450, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
