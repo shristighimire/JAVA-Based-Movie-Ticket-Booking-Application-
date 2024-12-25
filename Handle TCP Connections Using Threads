@@ -1,0 +1,30 @@
+private void initializeTCPServer() {
+    new Thread(() -> {
+        try (ServerSocket serverSocket = new ServerSocket(12345)) {
+            System.out.println("Server started. Waiting for clients...");
+            while (true) {
+                Socket clientSocket = serverSocket.accept();
+                new Thread(() -> handleClient(clientSocket)).start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Server error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }).start();
+}
+
+private void handleClient(Socket clientSocket) {
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
+        String output = reader.readLine();
+        System.out.println("Received: " + output);
+        saveOutputToFile(output);
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            clientSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
