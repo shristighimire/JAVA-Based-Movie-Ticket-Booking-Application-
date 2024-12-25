@@ -36,6 +36,7 @@ touch MovieTicketApp/images/mess_image.png
 touch MovieTicketApp/images/male_image.png
 touch MovieTicketApp/README.md
 touch MovieTicketApp/.gitignore
+***
 
 # Add content to .gitignore
 echo -e "*.class\n*.log\n*.png" > MovieTicketApp/.gitignore
@@ -50,4 +51,9 @@ The **Movie Ticket Booking App** is a Java Swing-based desktop application desig
 - Entering user and payment details.
 - Providing a responsive and user-friendly interface.
 
-## Project Structure
+
+
+## How to Run
+1. Compile: `javac -d bin src/com/example/movieticket/MovieTicketApp.java`
+2. Run: `java -cp bin com.example.movieticket.MovieTicketApp`
+
