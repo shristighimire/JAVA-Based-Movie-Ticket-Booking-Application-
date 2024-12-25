@@ -1,39 +1,53 @@
-# JAVA-Based-Movie-Ticket-Booking-Application-
-Built a Java app with Spring Boot for secure authentication, AES encryption for data protection, and MySQL for real-time inventory management.  Integrated RESTful APIs, improving system performance and increasing user retention by 30% and inventory management efficiency by 40%.     
-Project Structure:
-
-1. Project Structure
-This is the structure you are aiming for:
-
-bash
-Copy code
-/MovieTicketApp
-├── src
-│   └── com/example/movieticket/MovieTicketApp.java
-├── images
-│   ├── mess_image.png
-│   └── male_image.png
-├── README.md
-└── .gitignore
-
-arduino
-Copy code
-*.class
-*.log
-*.png
-README.md:
-
-markdown
-Copy code
 # Movie Ticket Booking App
 
-A Java Swing-based application for booking movie tickets and managing user preferences.
+## Project Description
+The **Movie Ticket Booking App** is a Java Swing-based desktop application designed for:
+- Selecting movie tickets and snacks.
+- Entering user and payment details.
+- Providing a responsive and user-friendly interface.
 
-## Features
-- Select movie tickets and snacks.
-- Input user and payment details.
-- Responsive and user-friendly interface.
+## Project Structure
 
-## How to Run
-1. Compile: `javac -d bin src/com/example/movieticket/MovieTicketApp.java`
-2. Run: `java -cp bin com.example.movieticket.MovieTicketApp`
+## Getting Started
+### Prerequisites
+- Java Development Kit (JDK)
+- A Java IDE or terminal for compilation and execution
+
+### How to Run
+1. Navigate to the `src` directory and compile the Java file:
+   ```bash
+   javac -d bin src/com/example/movieticket/MovieTicketApp.java
+
+
+
+---
+
+### 4. **Creating the Files**
+If you'd like to automate this file creation process, you can use the following Bash script:
+
+```bash
+# Create directories
+mkdir -p MovieTicketApp/src/com/example/movieticket
+mkdir -p MovieTicketApp/images
+
+# Create files
+touch MovieTicketApp/src/com/example/movieticket/MovieTicketApp.java
+touch MovieTicketApp/images/mess_image.png
+touch MovieTicketApp/images/male_image.png
+touch MovieTicketApp/README.md
+touch MovieTicketApp/.gitignore
+
+# Add content to .gitignore
+echo -e "*.class\n*.log\n*.png" > MovieTicketApp/.gitignore
+
+# Add content to README.md
+cat <<EOT > MovieTicketApp/README.md
+# Movie Ticket Booking App
+
+## Project Description
+The **Movie Ticket Booking App** is a Java Swing-based desktop application designed for:
+- Selecting movie tickets and snacks.
+- Entering user and payment details.
+- Providing a responsive and user-friendly interface.
+
+## Project Structure
