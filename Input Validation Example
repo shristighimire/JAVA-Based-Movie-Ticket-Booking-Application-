@@ -1,0 +1,12 @@
+private boolean isInputValid() {
+    if (fullNameTextField.getText().trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Full Name is required.", "Validation Error", JOptionPane.WARNING_MESSAGE);
+        return false;
+    }
+    if (!zipCodeTextField.getText().matches("\\d{5}")) {
+        JOptionPane.showMessageDialog(this, "Zip Code must be 5 digits.", "Validation Error", JOptionPane.WARNING_MESSAGE);
+        return false;
+    }
+    // Additional validation rules...
+    return true;
+}
